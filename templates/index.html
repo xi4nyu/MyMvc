@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Hello jack!</title>
+    <script type="text/javascript" src="{{ static_url("js/jquery-1.8.2.min.js") }}"></script>
+    <script type="text/javascript" src={{ static_url("js/index.js") }}></script>
+  </head>
+  <body>
+    {% raw xsrf_form_html() %}
+    <img src="{{ static_url("images/logo.png") }}" />
+    <hr />
+    <h1>Hello jack!</h1>
+    <a href="/jack">jack click this</a>
+    <div id="msg"></div>
+    <hr />
+    <a href="/">Google</a>
+    <ul>
+      {% for x, y in enumerate(r) %}
+      <li>{{ x + 1 }}: {{ y }}</li>
+      {% end %}
+    </ul>
+    <hr />
+    <span id="msg"></span>
+    <hr />
+  </body>
+</html>

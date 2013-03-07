@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>hello</title>
+  </head>
+  <body>
+    <form id="form1" action="/hello" method="post">
+      name: <input type="text" name="name" value="jack" />
+      age: <input type="text" name="age" value="20" />
+      addr: <input type="text" name="addr" value="bj" />
+      {{ xsrf_form_html() }}
+      <input type="submit" value="submit" />
+    </form>
+    <br />
+    <h1>Result:</h1>
+    {% for k, v in lst.iteritems() %}
+    {{ k }}: {{ v }}<br />
+    {% end %}
+  </body>
+</html>

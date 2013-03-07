@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Hello jack!</title>
+    <script type="text/javascript" src="{{ static_url("js/jquery-1.8.2.min.js") }}"></script>
+    <script type="text/javascript" src={{ static_url("js/j.js") }}></script>
+  </head>
+  <body>
+    <table id="t1" style="border: solid #000 1px;">
+      <tr>
+	<td>a</td>
+	<td></td>
+	<td></td>
+	<td><a href="javascript:;" class="remove">remove</a></td>
+      </tr>
+      <tr>
+	<td>b</td>
+	<td></td>
+	<td></td>
+	<td><a href="javascript:;" class="remove">remove</a></td>
+      </tr>
+      <tr>
+	<td>c</td>
+	<td></td>
+	<td></td>
+	<td><a href="javascript:;" class="remove">remove</a></td>
+      </tr>      
+    </table>
+    <input type="button" value="{{ handler.name }}" id="btnclick" />
+  </body>
+</html>

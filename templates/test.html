@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>
+    </title>
+    <script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+          $("#submit").click(put);
+      });
+
+      function put(){
+          $.ajax({
+              url: "/test",
+              type: $("#method").val(),
+              data: {},
+              success: function(data){
+                  alert(data);
+          }});
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <a href="/"><img src="http://www.google.com.hk/images/srpr/logo3w.png" /></a><br />
+      <input type="text" name="name" id="method" value="POST" />
+      <input type="button" value="submit" id="submit" /><br />
+      {{ xsrf_form_html() }}
+    </form>
+  </body>
+</html>

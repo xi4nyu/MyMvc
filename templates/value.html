@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title></title>
+    <script type="text/javascript" src="{{ static_url ("js/jquery-1.8.2.min.js") }}"></script>
+    <style type="text/css">
+      .t {
+      /*
+      border-style: none none solid none;
+      border-width: 0 0 1px 0;
+      border-color: #000000;
+      */
+  border-style: none none solid none;
+  border-width: 0 0 1px 0;
+  border-color: #000000;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><input type="text" class="t" /></li>
+    </ul>
+    <br />
+    <br />
+    <form action="/value" method="post">
+      {% raw xsrf_form_html() %}
+      <input type="text" name="alias" />
+      <input type="text" name="alias" />
+      <input type="text" name="alias" />
+      <br />
+      <input type="checkbox" name="select" value="1" />
+      <input type="checkbox" name="select" value="2" />
+      <input type="checkbox" name="select" value="3" />
+      <input type="checkbox" name="select" value="2" />
+      <input type="radio" name="select1" value="2" />
+      <input type="radio" name="select1" value="1" />
+      <input type="radio" name="select1" value="2" />
+      female
+      <input type="radio" name="gender" value="0" />
+      male
+      <input type="radio" name="gender" value="1" />
+      selected:
+      <select name="selected">
+	<option value="1">a</option>
+	<option value="2">b</option>
+	<option value="3">c</option>
+      </select>
+      result: {{ selected }}
+      <input type="submit" name="submit" value="Submit" />
+      
+    </form>
+  </body>
+</html>
